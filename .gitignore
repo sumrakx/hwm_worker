@@ -6,6 +6,12 @@
 /pkg/
 /spec/reports/
 /tmp/
+logs/
 
 # rspec failure tracking
 .rspec_status
+# credentials
+.hwm_credentials.yml
+# captcha
+captcha.png
+.byebug_history

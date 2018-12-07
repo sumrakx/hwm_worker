@@ -1,28 +1,36 @@
 # HwmWorker
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/hwm_worker`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem is intended to use on https://heroeswm.ru flash game. <br>
+This is made for automation of boring captcha in game scenario.
+So you pass your credentials in specific file, buy a captcha resolver at rucaptacha.com and watch you are going rich.
 
-TODO: Delete this and the text above, and describe your gem
+## Note
+
+You will need to install selenium and selenium driver.
+You can specify prefered selenium driver in `config/initializers.rb`. Here I use `:selenium_chrome`.
+
+For further information use this http://chromedriver.chromium.org/getting-started
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Download repo
 
-```ruby
-gem 'hwm_worker'
-```
+    $ git clone git@github.com:zhisme/hwm_worker.git
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
-Or install it yourself as:
+Create config files based on samples:
 
-    $ gem install hwm_worker
+    $ cp .hwm_credentials.sample.yml  .hwm_credentials.yml
+    $ cp secrets.sample.yml secrets.yml
+
+Fill in with your own game credentials.
 
 ## Usage
 
-TODO: Write usage instructions here
+`bin/run`
 
 ## Development
 
@@ -32,7 +40,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hwm_worker. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/ezhdanov/hwm_worker. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -40,4 +48,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the HwmWorker project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/hwm_worker/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the HwmWorker project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/ezhdanov/hwm_worker/blob/master/CODE_OF_CONDUCT.md).

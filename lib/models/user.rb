@@ -9,6 +9,10 @@ class User
   class << self
     attr_reader :users
 
+    def first
+      new(@users.first)
+    end
+
     def all
       users.map do |user|
         new(user)

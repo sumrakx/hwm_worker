@@ -20,7 +20,7 @@ class Runer
   attr_reader :session, :user
 
   def initialize(user)
-    @session = Capybara::Session.new(:selenium_chrome)
+    @session = Capybara::Session.new(:selenium_chrome_headless)
     @user = user
   end
 end

@@ -26,7 +26,9 @@ module Work
     end
 
     session.find('.wbtn').click
-    WorkLogger.current.info { "#{user} successfully applied for a job. Wait hour." }
+
+    WorkLogger.current.info { "#{user.login} successfully applied for a job. Wait hour." }
+    Rollbar.info("#{user.login} successfully applied for a job.")
   end
 
   def find_work(session)

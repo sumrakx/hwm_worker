@@ -32,6 +32,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "selenium-webdriver", "~> 2.53"
   spec.add_dependency "capybara", "~> 3.11"
   spec.add_dependency "rest-client", "~> 2.0"
+  spec.add_dependency "rollbar", "~> 2.18"
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"

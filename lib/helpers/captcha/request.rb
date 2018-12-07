@@ -1,4 +1,5 @@
 require 'rest-client'
+require 'config/secrets'
 
 module Captcha
   ##
@@ -11,7 +12,7 @@ module Captcha
     RUCAPTCHA_URL = 'http://rucaptcha.com'.freeze
     SOLVE_URL = "#{RUCAPTCHA_URL}/in.php".freeze
     FETCH_URL = "#{RUCAPTCHA_URL}/res.php".freeze
-    API_KEY = 'xxx'.freeze # TODO: move to credentials
+    API_KEY = SECRETS['rucaptcha']['token']
 
     attr_reader :json_response
 

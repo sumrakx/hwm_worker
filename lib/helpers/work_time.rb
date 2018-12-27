@@ -5,7 +5,7 @@ module WorkTime
   extend self
 
   HOUR = 60 * 60
-  DELTA = 5 # if some calculation went wrong on writing working time
+  DELTA = 10 # if some calculation went wrong on writing working time
 
   ##
   # Define time to sleep for worker + DELTA (ocasionally time)

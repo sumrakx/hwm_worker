@@ -1,5 +1,7 @@
 require 'config/urls'
 require 'helpers/captcha/main'
+require 'helpers/file_base'
+
 ##
 # Find available work
 #
@@ -29,6 +31,7 @@ module Work
 
     WorkLogger.current.info { "#{user.login} successfully applied for a job. Wait hour." }
     Rollbar.info("#{user.login} successfully applied for a job.")
+    FileBase.write_last_work(user.id)
   end
 
   def find_work(session)

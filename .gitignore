@@ -7,6 +7,9 @@
 /spec/reports/
 /tmp/
 logs/
+/file_base/*
+!/file_base/.keep
+
 
 # rspec failure tracking
 .rspec_status

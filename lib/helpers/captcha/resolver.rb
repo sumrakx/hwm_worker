@@ -14,11 +14,11 @@ module Captcha
     def call
       request = Request.new(base64_captcha: base64_captcha)
       request.solve
-      sleep 15
+      sleep 20
       request.fetch.json_response['request']
     rescue Captcha::Request::CaptchaNotResolved
       puts 'Captcha::Request::CaptchaNotResolved. Retrying'
-      sleep 20
+      sleep 30
       request.fetch.json_response['request']
     end
 

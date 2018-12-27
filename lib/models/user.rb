@@ -30,6 +30,10 @@ class User
     @record = record
   end
 
+  def id
+    @record['id']
+  end
+
   def login
     @record['login']
   end
